@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import FadeIn from "@/components/FadeIn"
 
 export const metadata: Metadata = {
   title: "Web Design & Development Services | Empreus Canberra",
@@ -71,7 +72,7 @@ export default function ServicesPage() {
       <section className="relative overflow-hidden py-24 px-[6%]">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] pointer-events-none"
           style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(249,115,22,0.15), transparent 70%)" }} />
-        <div className="relative z-10 max-w-3xl mx-auto text-center">
+        <FadeIn className="relative z-10 max-w-3xl mx-auto text-center">
           <span className="text-orange text-xs font-semibold tracking-[0.2em] uppercase border border-[#2a1f14] bg-[#1c1612] px-4 py-2 rounded-full">
             Our Services
           </span>
@@ -81,51 +82,52 @@ export default function ServicesPage() {
           <p className="text-[#a07860] mt-5 text-lg leading-relaxed">
             Whether you're starting from scratch, replacing an outdated website, or need reliable hosting and support, we deliver the complete package.
           </p>
-        </div>
+        </FadeIn>
       </section>
 
       {/* Services grid */}
       <section className="px-[6%] pb-24">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#2a1f14]">
-            {services.map((s) => (
-              <div
-                key={s.title}
-                className="bg-brand-dark2 p-8 group hover:bg-brand-dark3 transition-colors duration-300 flex flex-col gap-4"
-              >
-                <span className="text-3xl">{s.icon}</span>
-                <div className="w-8 h-px bg-orange group-hover:w-16 transition-all duration-300" />
-                <h3 className="text-[#e8ddd4] font-bold text-lg group-hover:text-orange transition-colors duration-300">
-                  {s.title}
-                </h3>
-                <p className="text-[#a07860] leading-relaxed text-sm flex-1">{s.body}</p>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {s.tags.map((t) => (
-                    <span key={t} className="text-xs text-[#5a4535] border border-[#2a1f14] px-2 py-1 rounded-full">
-                      {t}
-                    </span>
-                  ))}
+            {services.map((s, i) => (
+              <FadeIn key={s.title} delay={(i % 3) * 0.1} direction="up">
+                <div className="bg-brand-dark2 p-8 group hover:bg-brand-dark3 transition-colors duration-300 flex flex-col gap-4 h-full">
+                  <span className="text-3xl">{s.icon}</span>
+                  <div className="w-8 h-px bg-orange group-hover:w-16 transition-all duration-300" />
+                  <h3 className="text-[#e8ddd4] font-bold text-lg group-hover:text-orange transition-colors duration-300">
+                    {s.title}
+                  </h3>
+                  <p className="text-[#a07860] leading-relaxed text-sm flex-1">{s.body}</p>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {s.tags.map((t) => (
+                      <span key={t} className="text-xs text-[#5a4535] border border-[#2a1f14] px-2 py-1 rounded-full">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </FadeIn>
             ))}
           </div>
 
           {/* CTA */}
-          <div className="mt-16 bg-brand-dark2 border border-[#2a1f14] rounded-2xl p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div>
-              <h3 className="text-[#e8ddd4] font-bold text-xl">Not sure what your website needs?</h3>
-              <p className="text-[#a07860] mt-2 text-sm leading-relaxed">
-                Book a free 20-minute call and we'll assess your current site, identify what's holding you back, and recommend a clear path forward.
-              </p>
+          <FadeIn direction="up" className="mt-16">
+            <div className="bg-brand-dark2 border border-[#2a1f14] rounded-2xl p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div>
+                <h3 className="text-[#e8ddd4] font-bold text-xl">Not sure what your website needs?</h3>
+                <p className="text-[#a07860] mt-2 text-sm leading-relaxed">
+                  Book a free 20-minute call and we'll assess your current site, identify what's holding you back, and recommend a clear path forward.
+                </p>
+              </div>
+              <Link
+                href="/contact"
+                className="shrink-0 bg-orange hover:bg-orange-dark font-semibold px-7 py-3 rounded-full text-sm transition-colors duration-300 whitespace-nowrap"
+                style={{ color: "#ffffff" }}
+              >
+                Book a Free Assessment
+              </Link>
             </div>
-            <Link
-              href="/contact"
-              className="shrink-0 bg-orange hover:bg-orange-dark font-semibold px-7 py-3 rounded-full text-sm transition-colors duration-300 whitespace-nowrap"
-              style={{ color: "#ffffff" }}
-            >
-              Book a Free Assessment
-            </Link>
-          </div>
+          </FadeIn>
         </div>
       </section>
 

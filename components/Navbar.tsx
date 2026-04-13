@@ -38,7 +38,7 @@ export default function WebDevNavbar() {
             alt="Empreus"
             style={{ height: "32px", width: "auto" }}
           />
-          <span className={`hidden sm:block text-xs font-medium border-l pl-2 ml-1 leading-tight ${scrolled ? "text-white border-white/20" : "text-brand-muted border-brand-border"}`}>
+          <span className={`hidden sm:block text-xs font-medium border-l pl-2 ml-1 leading-tight transition-colors duration-300 ${scrolled ? "text-brand-muted border-brand-border" : "text-brand-muted border-brand-border"}`}>
             Web &<br />Hosting
           </span>
         </Link>

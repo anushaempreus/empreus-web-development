@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import FadeIn from "@/components/FadeIn"
 
 const faqs = [
   {
@@ -59,12 +60,13 @@ export default function FAQClient() {
 
   return (
     <main className="bg-white min-h-screen">
+
       <section className="relative bg-brand-dark overflow-hidden py-24 px-[6%]">
         <div
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] pointer-events-none"
           style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(249,115,22,0.15), transparent 70%)" }}
         />
-        <div className="relative z-10 max-w-3xl mx-auto text-center">
+        <FadeIn className="relative z-10 max-w-3xl mx-auto text-center">
           <span className="text-orange text-xs font-semibold tracking-[0.2em] uppercase border border-[#2a1f14] bg-[#1c1612] px-4 py-2 rounded-full">
             FAQ
           </span>
@@ -74,11 +76,11 @@ export default function FAQClient() {
           <p className="text-[#a07860] mt-5 text-lg leading-relaxed">
             Straight answers to the things most people want to know before working with a web designer. If your question isn't here, just ask.
           </p>
-        </div>
+        </FadeIn>
       </section>
 
       <section className="py-24 px-[6%]">
-        <div className="max-w-3xl mx-auto flex flex-col divide-y divide-brand-border">
+        <FadeIn className="max-w-3xl mx-auto flex flex-col divide-y divide-brand-border">
           {faqs.map((faq, i) => (
             <div key={i} className="py-6">
               <button
@@ -97,11 +99,11 @@ export default function FAQClient() {
               )}
             </div>
           ))}
-        </div>
+        </FadeIn>
       </section>
 
       <section className="py-20 px-[6%] bg-brand-dark">
-        <div className="max-w-3xl mx-auto text-center">
+        <FadeIn className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-black text-[#e8ddd4] leading-tight">
             Got a question we haven't answered?
           </h2>
@@ -109,14 +111,15 @@ export default function FAQClient() {
             We're real people who love talking about websites and helping businesses figure out what they need. Just reach out.
           </p>
           <Link
-            href="/web-development/contact"
+            href="/contact"
             className="inline-block mt-8 bg-orange hover:bg-orange-dark font-semibold px-8 py-3 rounded-full text-sm transition-colors duration-300"
             style={{ color: "#ffffff" }}
           >
             Ask Us Anything
           </Link>
-        </div>
+        </FadeIn>
       </section>
+
     </main>
   )
 }

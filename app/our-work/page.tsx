@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import FadeIn from "@/components/FadeIn"
 
 export const metadata: Metadata = {
   title: "Our Work | Website Portfolio",
@@ -79,12 +80,13 @@ export default function OurWorkPage() {
   return (
     <main className="bg-white min-h-screen">
 
+      {/* Hero */}
       <section className="relative bg-brand-dark overflow-hidden py-24 px-[6%]">
         <div
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] pointer-events-none"
           style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(249,115,22,0.15), transparent 70%)" }}
         />
-        <div className="relative z-10 max-w-3xl mx-auto text-center">
+        <FadeIn className="relative z-10 max-w-3xl mx-auto text-center">
           <span className="text-orange text-xs font-semibold tracking-[0.2em] uppercase border border-[#2a1f14] bg-[#1c1612] px-4 py-2 rounded-full">
             Our Work
           </span>
@@ -94,58 +96,62 @@ export default function OurWorkPage() {
           <p className="text-[#a07860] mt-5 text-lg leading-relaxed">
             Every website we build is designed with a purpose. To attract visitors, communicate your value, and generate enquiries or sales. Here's a selection of recent projects.
           </p>
-        </div>
+        </FadeIn>
       </section>
 
+      {/* Case studies */}
       <section className="py-24 px-[6%]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {caseStudies.map((cs) => (
-            <div
-              key={cs.title}
-              className="bg-white border border-brand-border rounded-2xl overflow-hidden hover:border-orange hover:shadow-lg transition-all duration-300 group flex flex-col"
-            >
-              <div className="h-2 w-full bg-orange-pale" />
-              <div className="p-8 flex flex-col gap-4 flex-1">
-                <span className="text-orange text-xs font-bold uppercase tracking-widest">{cs.sector}</span>
-                <h3 className="text-brand-text font-bold text-xl group-hover:text-orange transition-colors duration-300">{cs.title}</h3>
-                <p className="text-brand-muted text-sm leading-relaxed flex-1">{cs.body}</p>
-                <div className="mt-2 bg-orange-pale border border-orange-light rounded-xl px-4 py-3">
-                  <p className="text-orange text-sm font-semibold">{cs.result}</p>
-                </div>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {cs.tags.map((t) => (
-                    <span key={t} className="text-xs text-brand-muted border border-brand-border px-2 py-1 rounded-full">{t}</span>
-                  ))}
+          {caseStudies.map((cs, i) => (
+            <FadeIn key={cs.title} delay={(i % 3) * 0.1} direction="up">
+              <div className="bg-white border border-brand-border rounded-2xl overflow-hidden hover:border-orange hover:shadow-lg transition-all duration-300 group flex flex-col h-full">
+                <div className="h-2 w-full bg-orange-pale" />
+                <div className="p-8 flex flex-col gap-4 flex-1">
+                  <span className="text-orange text-xs font-bold uppercase tracking-widest">{cs.sector}</span>
+                  <h3 className="text-brand-text font-bold text-xl group-hover:text-orange transition-colors duration-300">{cs.title}</h3>
+                  <p className="text-brand-muted text-sm leading-relaxed flex-1">{cs.body}</p>
+                  <div className="mt-2 bg-orange-pale border border-orange-light rounded-xl px-4 py-3">
+                    <p className="text-orange text-sm font-semibold">{cs.result}</p>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {cs.tags.map((t) => (
+                      <span key={t} className="text-xs text-brand-muted border border-brand-border px-2 py-1 rounded-full">{t}</span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </section>
 
+      {/* Testimonials */}
       <section className="py-24 px-[6%] bg-brand-dark">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-orange text-sm font-semibold tracking-widest uppercase">Client Feedback</span>
             <h2 className="text-4xl font-black text-[#e8ddd4] mt-3">What our clients say</h2>
-          </div>
+          </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((t) => (
-              <div key={t.name} className="bg-[#0f0d0b] border border-[#2a1f14] rounded-2xl p-8 hover:border-orange transition-all duration-300 flex flex-col gap-6">
-                <div className="text-orange text-4xl font-black leading-none">"</div>
-                <p className="text-[#a07860] text-sm leading-relaxed flex-1 italic">{t.quote}</p>
-                <div>
-                  <p className="text-[#e8ddd4] font-bold text-sm">{t.name}</p>
-                  <p className="text-[#5a4535] text-xs mt-0.5">{t.role}</p>
+            {testimonials.map((t, i) => (
+              <FadeIn key={t.name} delay={i * 0.1} direction="up">
+                <div className="bg-[#0f0d0b] border border-[#2a1f14] rounded-2xl p-8 hover:border-orange transition-all duration-300 flex flex-col gap-6 h-full">
+                  <div className="text-orange text-4xl font-black leading-none">"</div>
+                  <p className="text-[#a07860] text-sm leading-relaxed flex-1 italic">{t.quote}</p>
+                  <div>
+                    <p className="text-[#e8ddd4] font-bold text-sm">{t.name}</p>
+                    <p className="text-[#5a4535] text-xs mt-0.5">{t.role}</p>
+                  </div>
                 </div>
-              </div>
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
+      {/* CTA */}
       <section className="py-20 px-[6%] bg-white">
-        <div className="max-w-3xl mx-auto text-center">
+        <FadeIn className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-black text-brand-text leading-tight">
             Want a website that actually works for your business?
           </h2>
@@ -153,13 +159,13 @@ export default function OurWorkPage() {
             Let's have a chat about what you need. We'll give you an honest assessment and a clear quote. No pushy sales, no jargon.
           </p>
           <Link
-            href="/web-development/contact"
+            href="/contact"
             className="inline-block mt-8 bg-orange hover:bg-orange-dark font-semibold px-8 py-3 rounded-full text-sm transition-colors duration-300"
             style={{ color: "#ffffff" }}
           >
             Start Your Project
           </Link>
-        </div>
+        </FadeIn>
       </section>
 
     </main>

@@ -3,6 +3,7 @@ import "./globals.css"
 import LoadingScreen from "@/components/LoadingScreen"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
+import PageTransition from "@/components/PageTransition"
 
 export const metadata: Metadata = {
   title: "Empreus Web Development & Hosting | Canberra",
@@ -15,7 +16,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="antialiased">
         <LoadingScreen />
         <Navbar />
-        <main className="pt-16">{children}</main>
+        <main className="pt-16">
+          <PageTransition>
+            {children}
+          </PageTransition>
+        </main>
         <Footer />
       </body>
     </html>
