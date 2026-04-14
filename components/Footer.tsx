@@ -9,8 +9,12 @@ export default function WebDevFooter() {
 
         {/* Brand */}
         <div className="md:col-span-1 flex flex-col items-center md:items-start">
-          <span className="font-black text-3xl tracking-tight" style={{ color: "#f97316" }}>EMPREUS</span>
-          <p className="text-[#5a4535] text-xs mt-1 font-medium uppercase tracking-widest">Web Development & Hosting</p>
+          <img
+            src="/empreus-logo.png"
+            alt="Empreus"
+            style={{ width: "160px", height: "auto", filter: "brightness(0) invert(1)" }}
+          />
+          <p className="text-[#5a4535] text-xs mt-3 font-medium uppercase tracking-widest">Web Development & Hosting</p>
           <p className="text-[#a07860] text-sm mt-4 leading-relaxed">
             Website design, development, and managed hosting for Australian businesses. Beautiful websites that rank, convert, and grow with your business.
           </p>
