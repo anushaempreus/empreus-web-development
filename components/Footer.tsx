@@ -21,11 +21,11 @@ export default function WebDevFooter() {
           <p className="text-[#5a4535] text-xs font-bold uppercase tracking-widest mb-4">Services</p>
           <div className="flex flex-col gap-2 items-center md:items-start">
             {[
-              { label: "Website Design", href: "/web-development#services" },
-              { label: "WordPress Development", href: "/web-development#services" },
-              { label: "E-Commerce", href: "/web-development#services" },
-              { label: "SEO", href: "/web-development#services" },
-              { label: "Managed Hosting", href: "/web-development/hosting" },
+              { label: "Website Design", href: "/services" },
+              { label: "WordPress Development", href: "/services" },
+              { label: "E-Commerce", href: "/services" },
+              { label: "SEO", href: "/services" },
+              { label: "Managed Hosting", href: "/hosting" },
             ].map((l) => (
               <Link key={l.label} href={l.href} className="text-[#a07860] hover:text-orange text-sm transition-colors duration-200">{l.label}</Link>
             ))}
@@ -37,10 +37,10 @@ export default function WebDevFooter() {
           <p className="text-[#5a4535] text-xs font-bold uppercase tracking-widest mb-4">Company</p>
           <div className="flex flex-col gap-2 items-center md:items-start">
             {[
-              { label: "About Us", href: "/web-development/about" },
-              { label: "Our Work", href: "/web-development/our-work" },
-              { label: "Pricing", href: "/web-development/pricing" },
-              { label: "FAQ", href: "/web-development/faq" },
+              { label: "About Us", href: "/about" },
+              { label: "Our Work", href: "/our-work" },
+              { label: "Pricing", href: "/pricing" },
+              { label: "FAQ", href: "/faq" },
             ].map((l) => (
               <Link key={l.label} href={l.href} className="text-[#a07860] hover:text-orange text-sm transition-colors duration-200">{l.label}</Link>
             ))}
@@ -52,9 +52,9 @@ export default function WebDevFooter() {
           <p className="text-[#5a4535] text-xs font-bold uppercase tracking-widest mb-4">Get in Touch</p>
           <div className="flex flex-col gap-2 text-[#a07860] text-sm items-center md:items-start">
             <a href="mailto:web@empreusitsupport.com.au" className="hover:text-orange transition-colors duration-200">web@empreusitsupport.com.au</a>
-            <a href="tel:0262000000" className="hover:text-orange transition-colors duration-200">(02) 6189 1322</a>
+            <a href="tel:0261891322" className="hover:text-orange transition-colors duration-200">(02) 6189 1322</a>
             <span>Unit 19/63 Wollongong St</span>
-            <Link href="/web-development/contact" className="hover:text-orange transition-colors duration-200">Fyshwick ACT 2609</Link>
+            <Link href="/contact" className="hover:text-orange transition-colors duration-200">Fyshwick ACT 2609</Link>
           </div>
           <div className="mt-6">
             <Link href="/" className="text-xs text-[#5a4535] hover:text-orange transition-colors duration-200">← Back to Empreus IT Support</Link>
