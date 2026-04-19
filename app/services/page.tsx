@@ -3,8 +3,16 @@ import Link from "next/link"
 import FadeIn from "@/components/FadeIn"
 
 export const metadata: Metadata = {
-  title: "Web Design & Development Services | Empreus Canberra",
-  description: "Full-service web design, development and hosting for Australian businesses. Custom design, WordPress, e-commerce, SEO, and more.",
+  title: "Web Design Services",
+  description:
+    "From branding and design to full Next.js builds — explore the web development services Empreus offers for Canberra businesses.",
+  alternates: { canonical: "https://empreus.website/services" },
+  openGraph: {
+    url: "https://empreus.website/services",
+    title: "Web Design Services | Empreus Web Development",
+    description:
+      "Explore web design, development, and maintenance services tailored for Canberra businesses.",
+  },
 }
 
 const services = [

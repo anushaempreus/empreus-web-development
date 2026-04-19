@@ -4,13 +4,15 @@ import Process from "@/components/Process"
 import CTA     from "@/components/CTA"
 
 export const metadata: Metadata = {
-  title: "Website Design, Development and Hosting | Canberra",
+  title: "Canberra Web Design & Development | Empreus",
   description:
-    "Beautiful, fast websites built for Australian businesses. Custom design, WordPress, e-commerce, SEO, and managed hosting. Based in Fyshwick, Canberra ACT.",
+    "Empreus builds fast, modern websites for Canberra businesses. From landing pages to full multi-page sites — designed, hosted, and supported locally.",
+  alternates: { canonical: "https://empreus.website" },
   openGraph: {
-    title: "Empreus Web Development | Canberra Website Design",
-    description: "Beautiful, fast websites built for Australian businesses. Custom design, WordPress, e-commerce, SEO, and managed hosting.",
     url: "https://empreus.website",
+    title: "Canberra Web Design & Development | Empreus",
+    description:
+      "Fast, modern websites for Canberra businesses. Designed, hosted, and supported locally.",
   },
 }
 

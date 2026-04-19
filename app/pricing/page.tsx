@@ -3,13 +3,15 @@ import Link from "next/link"
 import FadeIn from "@/components/FadeIn"
 
 export const metadata: Metadata = {
-  title: "Website Pricing | Fixed-Price Packages",
+  title: "Pricing",
   description:
-    "Transparent, fixed-price website packages from $2,500. Starter, Business, and E-Commerce options. Managed hosting from $49/month. No hidden fees.",
+    "Transparent web design and hosting pricing for Canberra small businesses. No hidden fees — see exactly what you get.",
+  alternates: { canonical: "https://empreus.website/pricing" },
   openGraph: {
-    title: "Website Pricing | Empreus Web Development",
-    description: "Transparent, fixed-price website packages from $2,500. Managed hosting from $49/month. No hidden fees.",
     url: "https://empreus.website/pricing",
+    title: "Pricing | Empreus Web Development",
+    description:
+      "Clear, honest web design and hosting pricing for Canberra businesses.",
   },
 }
 

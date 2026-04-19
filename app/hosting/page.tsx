@@ -3,13 +3,15 @@ import Link from "next/link"
 import FadeIn from "@/components/FadeIn"
 
 export const metadata: Metadata = {
-  title: "Managed Website Hosting | Australian Servers",
+  title: "Website Hosting",
   description:
-    "Fast, secure, fully managed website hosting on Australian infrastructure. Daily backups, SSL, 99.9% uptime, and same-day support. No technical headaches.",
+    "Reliable, fast website hosting managed by Empreus. We handle the infrastructure so you can focus on your business.",
+  alternates: { canonical: "https://empreus.website/hosting" },
   openGraph: {
-    title: "Managed Website Hosting | Empreus Canberra",
-    description: "Fast, secure, fully managed website hosting on Australian infrastructure. Daily backups, SSL, 99.9% uptime, and same-day support.",
     url: "https://empreus.website/hosting",
+    title: "Website Hosting | Empreus Web Development",
+    description:
+      "Managed website hosting for Canberra businesses. Fast, reliable, and locally supported.",
   },
 }
 

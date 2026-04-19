@@ -3,13 +3,15 @@ import Link from "next/link"
 import FadeIn from "@/components/FadeIn"
 
 export const metadata: Metadata = {
-  title: "About Us | Canberra Web Design Studio",
+  title: "About Us",
   description:
-    "Empreus Website Development is a Canberra-based web design studio. Small, hands-on team. Fixed prices. Local support. Building websites for Australian businesses since 2014.",
+    "Empreus is a Canberra-based IT and web development company. We build websites for local businesses and provide hands-on ongoing support.",
+  alternates: { canonical: "https://empreus.website/about" },
   openGraph: {
-    title: "About Empreus | Canberra Web Design Studio",
-    description: "Small, hands-on Canberra web design team. Fixed prices. Local support. Building websites for Australian businesses since 2014.",
     url: "https://empreus.website/about",
+    title: "About Us | Empreus Web Development",
+    description:
+      "A Canberra-based team building websites and providing IT support for local businesses.",
   },
 }
 
