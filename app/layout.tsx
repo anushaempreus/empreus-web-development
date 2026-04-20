@@ -7,6 +7,9 @@ import PageTransition from "@/components/PageTransition"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://empreus.website"),
+  verification: {
+    google: "E18hdS_SezEOI23yqysMSVf7a8WxYE4QhSFdNG0kafE",
+  },
   title: {
     template: "%s | Empreus Web Development",
     default: "Empreus Web Development | Canberra Web Design & Hosting",
