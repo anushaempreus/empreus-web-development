@@ -6,7 +6,7 @@ import Footer from "@/components/Footer"
 import PageTransition from "@/components/PageTransition"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://empreus.website"),
+  metadataBase: new URL("https://www.empreus.website"),
   verification: {
     google: "E18hdS_SezEOI23yqysMSVf7a8WxYE4QhSFdNG0kafE",
   },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_AU",
     siteName: "Empreus Web Development",
-    url: "https://empreus.website",
+    url: "https://www.empreus.website",
     title: "Empreus Web Development | Canberra Web Design & Hosting",
     description:
       "Fast, modern websites built for Canberra businesses. Custom design, hosting, and ongoing support from a local team.",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://empreus.website",
+    canonical: "https://www.empreus.website",
   },
 }
 

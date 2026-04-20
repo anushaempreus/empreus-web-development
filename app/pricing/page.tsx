@@ -304,7 +304,6 @@ export default function PricingPage() {
           </Link>
         </FadeIn>
       </section>
-
     </main>
   )
 }
