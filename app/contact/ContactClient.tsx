@@ -82,7 +82,6 @@ export default function ContactClient() {
       <section className="py-24 px-[6%]">
         <div className="max-w-3xl mx-auto">
 
-          {/* Single container */}
           <div className="bg-white border border-brand-border rounded-2xl p-10 shadow-sm">
             <div className="mb-8">
               <h2 className="text-2xl font-black text-brand-text">Send us a message</h2>
